@@ -15,7 +15,8 @@ public class ParkingController {
     @Autowired // Grâce à cette annotation on n'a pas besoin d'instantié la classe ParkingServiceImpl et les classes sont moins liées entre elles
     private ParkingService parkingService;
 
-    @CrossOrigin("http://localhost:4200")// Autorise les demandes venant de cet URL
+    //@CrossOrigin("http://localhost:4200")// Autorise les demandes venant de cet URL
+    @CrossOrigin("https://jmpark-nantes-app.herokuapp.com/")// Autorise les demandes venant de cet URL
     @RequestMapping(path = "/api/parkings",method = RequestMethod.GET)
     public List<Parking> getListeParking(){
         return parkingService.getListeParkings();
