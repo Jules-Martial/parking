@@ -16,7 +16,7 @@ public class ParkingController {
     private ParkingService parkingService;
 
     //@CrossOrigin("http://localhost:4200")// Autorise les demandes venant de cet URL
-    @CrossOrigin("*")// Autorise les demandes venant de cet URL
+    @CrossOrigin(origins = "*")// Autorise les demandes venant de cet URL
     @RequestMapping(path = "/api/parkings",method = RequestMethod.GET)
     public List<Parking> getListeParking(){
         return parkingService.getListeParkings();
